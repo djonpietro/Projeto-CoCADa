@@ -4,11 +4,6 @@ Esse projeto consiste na aplicação da Análise de Componentes Principais à co
 
 O DNA funciona como o "código de barras" da vida, pois cada parte dele codifica um gene, a unidade fundamental da hereditariedade e que é responsável por determinar a expressão de uma característica biológica. Todos os seres vivos possuem uma molécula de DNA dentro de cada uma de suas células, e essa molécula tem o formato de uma dupla-hélice, cada uma formada por uma sequência de **nucleotídeos**, que por sua vez são formados por uma pentose (uma molécula orgânica), fosfato (um íon) e uma base nitrogenada que pode ser Adenina (A), Timina (T), Citosina (C) ou guanina (G). É comum identificarmos cada nucleotídeo que compõe uma hélice do DNA através de sua base nitrogenada, e é assim que representamos amostras dessa molécula geralmente, como uma _string_ formada por caracteres A, T, G e C. 
 
-![[Pasted image 20240717151049.png]]
-![image](https://github.com/user-attachments/assets/abb9d25b-1240-433b-ade8-19d299ecf198)
-
-
-
 A mitocôndria é uma importante organela presente em células eucariontes (que possuem um núcleo envolvendo seu material genético) que, diferente das outras, possui DNA próprio, o que a torna interessante para comparações evolutivas. A escolha do do gene COI para esse trabalho se deve ao fato dele estar presente em um variado grupo de espécies do reino animal, de modo a facilitar a busca de amostras para usarmos aqui.
 
 O intuito desse projeto é comparar sequências do gene COI de diferentes animais e comparar, a luz desse gene, o quão duas espécies podem estar próximas evolutivamente, de forma a comparar também com a nossa própria noção usual de proximidade das espécies: "será que o chimpanzé ficará próximo dos seres humanos?" ou "uma mosca ficará próxima de uma abelha?".
@@ -63,13 +58,14 @@ Portanto, para qualquer dimensão $k$, se quisermos saber o tamanho das projeç�
 # Resultados
 Abaixo, está nossa matriz $M$ reconstruída com diferentes quantidades de componentes principais. Aqui se justifica nossa escolha de organizarmos as amostras de sequências de modo que grupos taxonômicos semelhantes estejam em linhas consecutivas. Percebamos, na reconstrução com 2 componentes principais, por exemplo, como que espécies taxonomicamente próximas, salvo algumas exceções, são semelhantes quanto o aspecto das "barras" na direção das colunas, como se cada grupo tivesse um "código de barras". Conforme, aumentamos o número de componentes principais, mais próximos estamos do aspecto da matriz original e mais diferentes vão ficando as espécies individualmente.
 
-![[Pasted image 20240716194609.png]]
+![image](https://github.com/user-attachments/assets/abb9d25b-1240-433b-ade8-19d299ecf198)
 
 Para as duas primeiras componentes, percebemos que os mamíferos (que são as primeiras linhas da matriz original) tem bastante similaridade entre si, assim como os artrópodes (que são as linhas seguintes aos mamíferos) e os peixes (que seguem os artrópodes). Já outros grupos, como os moluscos (as últimas linhas da matriz original) ficaram menos parecidos entre si, assim como os anelídeos (que estão abaixo dos peixes).
 
 Na próxima imagem, encontram-se as espécies (com seus nomes genéricos) representadas em duas dimensões cuja base é formada pelas duas primeiras componentes principais.
 
-![[Pasted image 20240717185129.png]]
+![image](https://github.com/user-attachments/assets/3779ad25-127d-464f-83e1-a2bdca31d156)
+
 
 Daqui podemos fazer várias observações, como
 - Os mamíferos Ser Humanos e Chimpanzé estão mais próximos entre si do que dos camundongos.
@@ -90,11 +86,13 @@ Também temos que animais de grupos taxonômicos mais distantes conservam certa 
 
 Abaixo, representamos as espécies agora em dimensão 3. Podemos observar mais atentamente algumas diferenças a mais nos grupos taxonômicos, como por exemplo os artrópodes abelha e mosca estarem mais perto entre si do que do caranguejo, o que faz sentido, já que os dois primeiros são insetos, enquanto o terceiro é um crustáceo, ou uma galinha e um avestruz serem mais parecidos entre si do que esses de um falcão, o que de fato ocorre se analisarmos um cladograma das aves.
 
-![[Pasted image 20240717185244.png]]
+![image](https://github.com/user-attachments/assets/0ce008de-4d2e-43e3-b902-4f78dc1817b3)
+
 
 No gráfico abaixo, percebemos que boa parte da variância (cerca de 83%) nos dados encontram-se na primeira componente principal. O fit de ajuste do PCA encontra-se nas duas primeiras componentes principais, o que sugere que as variâncias explicadas nas demais componentes são ruídos estatísticos.
 
-![[Pasted image 20240716195657.png]]
+![image](https://github.com/user-attachments/assets/0bfadf65-2c61-436e-b349-8dcc97d228de)
+
 
 | PC  | Variância  |
 | --- | ---------- |
@@ -107,11 +105,13 @@ Também é interessante analisar a variância em cada grupo taxonômico, para av
 
 Abaixo está um gráfico de barras para a variância nos grupos na primeira componente principal.
 
-![[Pasted image 20240717182442.png]]
+![image](https://github.com/user-attachments/assets/7a51af2a-c1d4-4da0-83c4-98f0f3bc4040)
+
 
 Observamos que, por exemplo, os anelídeos e os anfíbios variam muito pouco nessa componente. Isso implica que para as espécies que selecionamos, tanto de anelídeos quanto de anfíbios, elas estão bem próximas quanto a principal característica relacionada ao gene COI. Isso já não vale para os peixes. Para a segunda componente, temos os seguinte gráfico:
 
-![[Pasted image 20240717184911.png]]
+![image](https://github.com/user-attachments/assets/9e76f8ad-18f9-41a9-adc8-2baf3dd553ae)
+
 
 Já para segunda principal característica relacionada ao gene, vemos que os anelídeos variam bem mais entre si dessa vez quando comparados aos demais grupos. Vemos também que para essa segunda característica, mamíferos, artrópodes e peixes, por exemplo, estão bem próximos entre si.
 
