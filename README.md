@@ -5,6 +5,8 @@ Esse projeto consiste na aplicação da Análise de Componentes Principais à co
 O DNA funciona como o "código de barras" da vida, pois cada parte dele codifica um gene, a unidade fundamental da hereditariedade e que é responsável por determinar a expressão de uma característica biológica. Todos os seres vivos possuem uma molécula de DNA dentro de cada uma de suas células, e essa molécula tem o formato de uma dupla-hélice, cada uma formada por uma sequência de **nucleotídeos**, que por sua vez são formados por uma pentose (uma molécula orgânica), fosfato (um íon) e uma base nitrogenada que pode ser Adenina (A), Timina (T), Citosina (C) ou guanina (G). É comum identificarmos cada nucleotídeo que compõe uma hélice do DNA através de sua base nitrogenada, e é assim que representamos amostras dessa molécula geralmente, como uma _string_ formada por caracteres A, T, G e C. 
 
 ![[Pasted image 20240717151049.png]]
+![image](https://github.com/user-attachments/assets/abb9d25b-1240-433b-ade8-19d299ecf198)
+
 
 
 A mitocôndria é uma importante organela presente em células eucariontes (que possuem um núcleo envolvendo seu material genético) que, diferente das outras, possui DNA próprio, o que a torna interessante para comparações evolutivas. A escolha do do gene COI para esse trabalho se deve ao fato dele estar presente em um variado grupo de espécies do reino animal, de modo a facilitar a busca de amostras para usarmos aqui.
